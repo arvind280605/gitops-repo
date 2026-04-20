@@ -17,3 +17,17 @@ spec:
         image: arvii123/devops-app:1
         ports:
         - containerPort: 5000
+        imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-service
+spec:
+  selector:
+    app: devops-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+  type: NodePort
