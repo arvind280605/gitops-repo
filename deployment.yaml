@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: devops-app
-        image: arvii123/devops-app:1
+        image: arvii123/devops-app:9
         ports:
         - containerPort: 5000
         imagePullPolicy: Always
